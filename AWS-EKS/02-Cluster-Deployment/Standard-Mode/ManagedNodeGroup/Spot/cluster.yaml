@@ -1,16 +1,16 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-  name: demo-cluster    
+  name: spot-cluster
   region: us-east-1 
-  version: "1.34"   
+  version: "1.36"   
 iam:
   vpcResourceControllerPolicy: true
   withOIDC: true
 accessConfig:
   authenticationMode: API_AND_CONFIG_MAP
 managedNodeGroups:
-  - name: demo-cluster-ng
+  - name: spot-cluster-ng
     spot: true
     instanceTypes:
       - t2.large
