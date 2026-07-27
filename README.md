@@ -1,6 +1,6 @@
 # AWS-Cloud-Infrastructure-Blueprints
 
-# 🚀 Know what on AWS Cloud, How it helps business 
+# 🚀 Know whats on AWS Cloud, How it helps business 
 
 
 A curated collection of hands-on AWS, production-ready examples, deployment guides, and Kubernetes best practices.
