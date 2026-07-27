@@ -1,0 +1,20 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster-with-karpenter
+  region: us-west-2
+  version: '1.32' # requires a version of Kubernetes compatible with Karpenter
+  tags:
+    karpenter.sh/discovery: cluster-with-karpenter # here, it is set to the cluster name
+iam:
+  withOIDC: true # required
+
+karpenter:
+  version: '1.2.1' # Exact version should be specified according to the Karpenter compatibility matrix
+
+managedNodeGroups:
+  - name: managed-ng-1
+    minSize: 1
+    maxSize: 2
+    desiredCapacity: 1
